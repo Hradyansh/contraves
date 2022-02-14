@@ -1,0 +1,327 @@
+
+html {
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url('images/e.jpg');
+  background-size: cover;
+}
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+button{
+  background-color: #bcaf9f;
+  font-family: contravesQuote;
+  font-weight: 700;
+  color: #140c00;
+}
+
+@font-face {
+    src: url(fonts/Montosal.otf);
+    font-family: contravesAuthor;
+    font-weight: 700;
+
+}
+
+@font-face {
+    src: url(fonts/Shegisha.otf);
+    font-family: contravesQuote;
+
+}
+@font-face{
+  src: url(fonts/back/x.otf);
+  font-family: contravis;
+}
+
+
+.quote-background {
+  position: absolute;
+  width: 23%;
+  height: 50%;
+  margin-top: 8%;
+  margin-bottom: 7%;
+  margin-left: 70%;
+  padding-right: 10%;
+  box-sizing: content-box;
+  word-wrap: break-word;
+  z-index: 0;
+  font-size: 1rem;
+
+}
+.quote-background div{
+
+  font-size: 2em;
+  font-family: contravesQuote;
+  text-align: left;
+  max-height: 50%;
+  color: orange;
+  background-color:  rgba(10,10,10,0.5);
+  font-weight: bold;
+  border-radius: 1em;
+  padding:5%;
+  z-index: 1;
+}
+.quote-background p{
+  margin-top: 10%;
+  margin-bottom: 0;
+  font-size: 8em;
+  font-family: contravesAuthor;
+  text-align: right;
+  color: #fef2e2;
+  z-index: 0;
+
+  font-weight: bold;
+  border-radius: 1em;
+  padding:5%;
+}
+
+
+
+/* ------------------------------------------------- */
+.box{
+  border: 0px solid orange;
+}
+.glass-effect{
+  position: absolute;
+  /* display: flex; */
+  width: 36%;
+  height: 90%;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 4em;
+  left:32%;
+  top:5%;
+  box-shadow: white 0px 54px 55px, white 0px -12px 30px, white 0px 4px 6px, white 0px 12px 13px, white 0px -3px 5px;
+}
+.wrapper {
+  position: absolute;
+
+
+  border-radius: 4em;
+
+  width: 36%;
+  height: 90%;
+  left:32%;
+  top:5%;
+
+
+}
+
+.wrapper::before{
+  border-radius: 8%;
+  background-color: white;
+  margin-top: 15%;
+  padding: 2%;
+  padding-top: 4.5%;
+  padding-left: 4.5%;
+  position: absolute;
+  content: ' H';
+  /* font-style: italic; */
+  font-family: contravis;
+  color: red;
+  font-weight: bold;
+  font-size: 5rem;
+  top:30%;
+  left: -40%;
+  transform: rotateZ(-90deg);
+  border: 5px solid black;
+
+}
+
+.todo-text-input {
+  width:100%;
+  height: 22.22%;
+
+
+}
+
+.logo {
+  position: relative;
+  width: 11.11%;
+  height: 25%;
+  left: 44.44%;
+}
+.input-box-console{
+  position: relative;
+  left: 11.11%;
+  width: 77.77%;
+  height: 50%;
+  background: white;
+}
+.logo-cell {
+  height: 100%;
+  width: 14.28%;
+  /* background: red; */
+  background-image: url(icons/message.svg);
+  background-repeat: no-repeat;
+  /* background-position: 1% 2%; */
+  background-size: contain;
+}
+
+.input-cell {
+  width: 71.42%;
+  height: 100%;
+  background:  black;
+}
+.button-cell {
+  height: 100%;
+  width: 14.28%;
+  background: black;
+}
+
+inputForm {
+  position: relative;
+  left: 11.11%;
+  width: 77.77%;
+  height: 50%;
+}
+
+.text-input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  padding-left: 2%;
+
+  text-indent: 10%;
+  overflow-x: scroll;
+  text-align: left;
+
+}
+
+.addButton{
+
+  width: 100%;
+  height: 100%;
+}
+
+.function-keys{
+  position: relative;
+  left: 11.11%;
+  width: 77.77%;
+  height: 25%;
+  font-size: 0;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.markAll{
+
+  width: 28.57%;
+  height: 100%;
+
+}
+.clearAll{
+
+  width: 28.57%;
+  height: 100%;
+}
+
+/* //------------------------------------------------------- */
+
+.task-wrapper{
+  width:100%;
+  height: 61.11%;
+  overflow-y:  scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: rgba( 242, 243, 244 ,0.2);
+  border-bottom-left-radius: 1.5em ;
+  border-bottom-right-radius: 1.5em ;
+
+
+  /* opacity: 0.2; */
+}
+
+.space{
+  position: relative;
+  width: 100%;
+  height: 9.09%;
+}
+
+ .task-display{
+  position: relative;
+  width: 77.77%;
+  height: 9.09%;
+
+  left: 11.11%;
+  font-size: 0;
+
+}
+
+.check-box{
+  width: 14.28%;
+  height: 100%;
+  display: inline-block;
+}
+
+
+.task-text{
+  width: 71.42%;
+  height: 100%;
+  display: inline-block;
+  color: white;
+  font-size: x-large;
+  font-family: contravis;
+
+
+}
+
+
+.deleteButton{
+  width: 14.28%;
+  height: 100%;
+  position: relative;
+  top:-50%;
+
+}
+
+/* -------------------- */
+
+.footer{
+  height: 16.66%;
+  width: 100%;
+  text-align: right;
+}
+
+.change-state{
+  position: relative;
+  height: 33.33%;
+  width: 66.66%;
+  margin-right: 11.11%;
+  font-size: 0;
+  left: 22.22%;
+}
+.change-state button{
+  height: 100%;
+  width: 33.33%;
+
+}
+
+.count{
+  position: relative;
+  left: 44.44%;
+  width: 44.44%;
+  height: 33.33%;
+  display: flex;
+
+}
+
+.remaining-count{
+  height: 100%;
+  width: 50%;
+
+}
+
+.total-count{
+  height: 100%;
+  width: 50%;
+
+}
