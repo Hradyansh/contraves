@@ -6,18 +6,44 @@ const authorTag = document.querySelector('.author');
 async function setBackgroundText() {
 
   //const response = await fetch("https://type.fit/api/quotes");
-  const response = await fetch("https://api.api-ninjas.com/v1/quotes");
+  //const response = await fetch("https://api.api-ninjas.com/v1/quotes");
+  const response = await fetch("https://quotesondesign.com/wp-json/wp/v2/posts/")
 
   const data = await response.json();
+  //this is for the new API
+  console.log(data);
+  console.log(data[0].content.rendered);
+  console.log(data[0].title.rendered);
 
+  let random = Math.floor(Math.random() * 1)
+  console.log(data[random].content.rendered);
+  console.log(data[random].title.rendered);
 
-  let random = Math.floor(Math.random() * 1000)
-  console.log(data[random].text);
-  console.log(data[random].author);
-  quoteTag.textContent = data[random].text;
+  quote = data[random].content.rendered
+
+  // Remove opening and closing <p> tags
+  quote = quote.replace(/<\/?p>/g, '');
+
+  // Decode HTML entities (like &#8217; for apostrophe)
+  // Create a temporary element to decode HTML entities
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = quote;
+  quote = tempDiv.textContent; 
+  console.log(quote)
+
+  quoteTag.textContent = quote;
   document.querySelectorAll('[data-type]').forEach(draw);
-  await wait(7000);
-  authorTag.textContent = data[random].author;
+  await wait(70);
+  authorTag.textContent = data[random].title.rendered;
+
+
+  // let random = Math.floor(Math.random() * 10)
+  // console.log(data[random].text);
+  // console.log(data[random].author);
+  // quoteTag.textContent = data[random].text;
+  // document.querySelectorAll('[data-type]').forEach(draw);
+  // await wait(7000);
+  // authorTag.textContent = data[random].author;
 
 
 }
