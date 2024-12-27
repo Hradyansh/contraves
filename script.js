@@ -15,7 +15,7 @@ async function setBackgroundText() {
   console.log(data[0].content.rendered);
   console.log(data[0].title.rendered);
 
-  let random = Math.floor(Math.random() * 1)
+  let random = Math.floor(Math.random() * 10)
   console.log(data[random].content.rendered);
   console.log(data[random].title.rendered);
 
