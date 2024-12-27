@@ -5,7 +5,8 @@ const authorTag = document.querySelector('.author');
 
 async function setBackgroundText() {
 
-  const response = await fetch("https://type.fit/api/quotes");
+  //const response = await fetch("https://type.fit/api/quotes");
+  const response = await fetch("https://api.api-ninjas.com/v1/quotes");
 
   const data = await response.json();
 
